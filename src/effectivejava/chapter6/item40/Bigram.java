@@ -15,6 +15,7 @@ public class Bigram {
         return b.first == first && b.second == second;
     }
 
+    @Override
     public int hashCode() {
         return 31 * first + second;
     }
