@@ -1,6 +1,8 @@
 package effectivejava.chapter7.item42;
 
+import java.util.List;
 import java.util.function.DoubleBinaryOperator;
+import java.util.stream.Collectors;
 
 // Enum with function object fields & constant-specific behavior (Page 195)
 public enum Operation {
@@ -25,10 +27,14 @@ public enum Operation {
 
     // Main method from Item 34 (Page 163)
     public static void main(String[] args) {
-        double x = Double.parseDouble(args[0]);
-        double y = Double.parseDouble(args[1]);
-        for (Operation op : Operation.values())
-            System.out.printf("%f %s %f = %f%n",
-                    x, op, y, op.apply(x, y));
+//        double x = Double.parseDouble(args[0]);
+//        double y = Double.parseDouble(args[1]);
+//        for (Operation op : Operation.values())
+//            System.out.printf("%f %s %f = %f%n",
+//                    x, op, y, op.apply(x, y));
+        String str = "abcABC";
+        System.out.println(List.of("a", "b", "c").stream().collect(Collectors.joining(",")).toString());
+        System.out.println(str.lastIndexOf("123"));
+        System.out.println(str.lastIndexOf("ABC"));
     }
 }

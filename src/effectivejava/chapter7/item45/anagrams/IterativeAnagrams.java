@@ -14,8 +14,8 @@ public class IterativeAnagrams {
         try (Scanner s = new Scanner(dictionary)) {
             while (s.hasNext()) {
                 String word = s.next();
-                groups.computeIfAbsent(alphabetize(word),
-                        (unused) -> new TreeSet<>()).add(word);
+                groups.computeIfAbsent(alphabetize(word), (unused) -> new TreeSet<>())
+                        .add(word);
             }
         }
 

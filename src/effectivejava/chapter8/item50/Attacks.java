@@ -8,6 +8,7 @@ public class Attacks {
         Date start = new Date();
         Date end = new Date();
         Period p = new Period(start, end);
+        Calendar calendar = Calendar.getInstance();
         end.setYear(78);  // Modifies internals of p!
         System.out.println(p);
 
@@ -17,5 +18,7 @@ public class Attacks {
         p = new Period(start, end);
         p.end().setYear(78);  // Modifies internals of p!
         System.out.println(p);
+
+        System.out.println(Objects.deepEquals(null,null));
     }
 }
